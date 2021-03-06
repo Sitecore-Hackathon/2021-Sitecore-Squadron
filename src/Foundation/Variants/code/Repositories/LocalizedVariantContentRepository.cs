@@ -26,7 +26,7 @@ namespace Foundation.Variants.Repositories
         public new Item GetItem(ID id)
         {
             var item = base.GetItem(id);
-            if (item == null || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            if (item == null)
             {
                 return item;
             }
@@ -39,6 +39,11 @@ namespace Foundation.Variants.Repositories
 
             if (template.InheritsFrom(Templates.LocalizedVariantDefinition.Id))
             {
+                if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+                {
+                    return null;
+                }
+
                 return this._localizedVariantResolver.ResolveLocalizedVariantFromMagicVariant(item);
             }
 

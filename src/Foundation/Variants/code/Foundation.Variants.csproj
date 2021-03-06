@@ -69,6 +69,7 @@
     <Compile Include="DI\Configurator.cs" />
     <Compile Include="Models\CoordinateRuleSearchResultItem.cs" />
     <Compile Include="Models\LocalizedVariantSettingSearchResultItem.cs" />
+    <Compile Include="Pipelines\RenderRendering\DisableCacheForLocalizedVariants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ILocalizedVariantContentRepository.cs" />
     <Compile Include="Repositories\ILocalizedVariantResolver.cs" />
@@ -86,9 +87,7 @@
       <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pipelines\GetVariants\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
