@@ -8,9 +8,9 @@ namespace Foundation.Controls.Controls.BaseControl
         {
             if (value == null)
                 return false;
-            if (this.GetViewStateString("Value") != value)
+            if (GetViewStateString("Value") != value)
                 Sitecore.Context.ClientPage.Modified = true;
-            this.SetViewStateString("Value", value);
+            SetViewStateString("Value", value);
             return true;
         }
     }
