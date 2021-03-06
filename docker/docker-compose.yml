@@ -10,7 +10,7 @@ services:
       - "--ping"
       - "--api.insecure=true"
       - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
-      - "--providers.docker.exposedByDefault=false"
+      - "--providers.docker.exposedByDefault=true"
       - "--providers.file.directory=C:/etc/traefik/config/dynamic"
       - "--entryPoints.websecure.address=:443"
     ports:
