@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\BaseControl\BaseVariantControl.cs" />
     <Compile Include="Controls\FallbackVariantSelectionControl.cs" />
     <Compile Include="Controls\VariantSelectionControl.cs" />
     <Compile Include="Helpers\VariantControlsHelper.cs" />

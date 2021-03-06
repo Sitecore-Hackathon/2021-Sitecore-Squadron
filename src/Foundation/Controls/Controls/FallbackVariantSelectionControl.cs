@@ -1,23 +1,14 @@
-﻿using Foundation.Controls.Helpers;
-using Sitecore.Web.UI.HtmlControls;
+﻿using Foundation.Controls.Controls.BaseControl;
+using Foundation.Controls.Helpers;
 
 namespace Foundation.Controls.Controls
 {
-    public class FallbackVariantSelectionControl : Control
+    public class FallbackVariantSelectionControl : BaseVariantControl
     {
         protected override void DoRender(System.Web.UI.HtmlTextWriter output)
         {
             var associatedVariants = VariantControlsHelper.GetAssociatedVariants(ControlAttributes, false);
             output.Write(VariantControlsHelper.OptionsToOutput(ControlAttributes, Value, VariantControlsHelper.GenerateKeyValuePairs(associatedVariants)));
-        }
-        protected override bool LoadPostData(string value)
-        {
-            if (value == null)
-                return false;
-            if (this.GetViewStateString("Value") != value)
-                Sitecore.Context.ClientPage.Modified = true;
-            this.SetViewStateString("Value", value);
-            return true;
-        }        
+        }            
     }
 }
