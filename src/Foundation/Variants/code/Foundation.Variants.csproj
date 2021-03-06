@@ -63,6 +63,9 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Sitecore.Kernel" />
+    <PackageReference Include="Sitecore.XA.Foundation.SitecoreExtensions">
+      <Version>10.1.0</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="**\*.cs" Exclude="$(BaseIntermediateOutputPath)**\*.*;bin\**\*.*;" />
