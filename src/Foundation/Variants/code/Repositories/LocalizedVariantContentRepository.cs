@@ -37,7 +37,7 @@ namespace Foundation.Variants.Repositories
                 return item;
             }
 
-            if (template.InheritsFrom(Templates.VariantDefinition.Id) && string.Equals(item?.Name, "Localize", StringComparison.OrdinalIgnoreCase))
+            if (template.InheritsFrom(Templates.LocalizedVariantDefinition.Id))
             {
                 return this._localizedVariantResolver.ResolveLocalizedVariantFromMagicVariant(item);
             }

@@ -51,5 +51,8 @@
     <PackageReference Include="Sitecore.Kernel" />
     <PackageReference Include="Sitecore.XA.Foundation.SitecoreExtensions" VersionOverride="10.1.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="web.config.xdt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
