@@ -5,6 +5,8 @@ services:
     isolation: ${TRAEFIK_ISOLATION}
     image: ${TRAEFIK_IMAGE}
     command:
+      - "--log.level=DEBUG"
+      - "--accesslog=true"
       - "--ping"
       - "--api.insecure=true"
       - "--providers.docker.endpoint=npipe:////./pipe/docker_engine"
@@ -129,6 +131,6 @@ services:
       - "traefik.http.middlewares.force-STS-Header.headers.forceSTSHeader=true"
       - "traefik.http.middlewares.force-STS-Header.headers.stsSeconds=31536000"
       - "traefik.http.routers.cm-secure.entrypoints=websecure"
-      - "traefik.http.routers.cm-secure.rule=Host(`${CM_HOST}`)"
+      - "traefik.http.routers.cm-secure.rule=Host(`${CM_HOST}`) || Host(`${CD_HOST}`)"
       - "traefik.http.routers.cm-secure.tls=true"
       - "traefik.http.routers.cm-secure.middlewares=force-STS-Header"
