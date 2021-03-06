@@ -73,7 +73,6 @@
     <Compile Include="Repositories\ILocalizedVariantContentRepository.cs" />
     <Compile Include="Repositories\ILocalizedVariantResolver.cs" />
     <Compile Include="Repositories\LocalizedVariantContentRepository.cs" />
-    <Compile Include="Repositories\LocalizedVariantContentRepository.cs" />
     <Compile Include="Repositories\LocalizedVariantReseolver.cs" />
     <Compile Include="Templates.cs" />
     <Content Include="App_Config\Include\Foundation\Foundation.Variants.config" />
