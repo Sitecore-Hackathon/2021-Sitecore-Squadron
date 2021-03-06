@@ -29,9 +29,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docker", "_Docker", "{7A26
 		docker\docker-compose.yml = docker\docker-compose.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{6CBA0D04-1C1A-4B63-BCA2-D348CEBBBD20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.Controls", "src\Foundation\Controls\Foundation.Controls.csproj", "{A4B0560F-FA61-4BCC-801F-FE202A2F9264}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CBA0D04-1C1A-4B63-BCA2-D348CEBBBD20} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{A4B0560F-FA61-4BCC-801F-FE202A2F9264} = {6CBA0D04-1C1A-4B63-BCA2-D348CEBBBD20}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
