@@ -32,6 +32,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Controls", "Controls", "{6CBA0D04-1C1A-4B63-BCA2-D348CEBBBD20}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.Controls", "src\Foundation\Controls\Foundation.Controls.csproj", "{A4B0560F-FA61-4BCC-801F-FE202A2F9264}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Variants", "Variants", "{B176371B-F1BE-4984-8972-72FF685A43F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.Variants", "src\Foundation\Variants\code\Foundation.Variants.csproj", "{034F759C-D6CE-4EB6-BAE6-CF00F6D89C0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +46,10 @@ Global
 		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4B0560F-FA61-4BCC-801F-FE202A2F9264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{034F759C-D6CE-4EB6-BAE6-CF00F6D89C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{034F759C-D6CE-4EB6-BAE6-CF00F6D89C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{034F759C-D6CE-4EB6-BAE6-CF00F6D89C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{034F759C-D6CE-4EB6-BAE6-CF00F6D89C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +57,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6CBA0D04-1C1A-4B63-BCA2-D348CEBBBD20} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
 		{A4B0560F-FA61-4BCC-801F-FE202A2F9264} = {6CBA0D04-1C1A-4B63-BCA2-D348CEBBBD20}
+		{B176371B-F1BE-4984-8972-72FF685A43F4} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{034F759C-D6CE-4EB6-BAE6-CF00F6D89C0C} = {B176371B-F1BE-4984-8972-72FF685A43F4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}
