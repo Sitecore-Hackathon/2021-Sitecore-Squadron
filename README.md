@@ -47,6 +47,6 @@ Content Authors will not have to think twice to determine what rendering variant
 
 ![Inserting Localized Rendering Variants Setting](docs/images/insertingLocalizedRenderingVariantsSetting.png?raw=true "Inserting Localized Rendering Variants Setting")
 
-3. On this newly created Localized Rendering Variant Setting item, fill the Rendering Variant Definition field with the Rendering Variant Definition you want to mess around with. Then save the item. After doing so, the available rendering variants will appear for the Fallback Variant field. This Fallback Variant field will be used when either a) a user's location cannot be resolved or b) the user's location is not within a certain distance away from certain locations to receive the localized variant for a particular region.
+3. On this newly created Localized Rendering Variant Setting item, fill the Rendering Variant Definition field with the Rendering Variant Definition you want to mess around with. Then save the item. After doing so, the available rendering variants will appear for the Fallback Variant field. This Fallback Variant field will be used when either a) a user's location cannot be resolved or b) the user's location is not within a certain distance away from a particular region to receive its localized version.
 
 ![Selecting Rendering Variant Definition To Localize](docs/images/selectingRenderingVariantDefinitionToLocalize.png?raw=true "Selecting Rendering Variant Definition To Localize")
