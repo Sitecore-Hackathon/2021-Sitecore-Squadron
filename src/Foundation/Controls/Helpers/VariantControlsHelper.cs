@@ -13,10 +13,11 @@ namespace Foundation.Controls.Helpers
         public static IEnumerable<Item> GetAssociatedVariants(string controlAttributes, bool variantDefinitionSelectedOnParent = false)
         {
             var renderingSettingItem = GetRenderingSettingItem(controlAttributes, variantDefinitionSelectedOnParent);
-            var selectedRenderingVariantDefinition = new ReferenceField(renderingSettingItem.Fields[Templates.LocalizedRenderingVariantSetting.Fields.RenderingVariantDefinitionId]).TargetItem;            
+            var selectedRenderingVariantDefinition = 
+                new ReferenceField(renderingSettingItem.Fields[Templates.LocalizedRenderingVariantSetting.Fields.RenderingVariantDefinitionId]).TargetItem;            
             if (selectedRenderingVariantDefinition != null)
             {
-                return selectedRenderingVariantDefinition.Children;
+                return selectedRenderingVariantDefinition.Children.Where(c => !c.TemplateID.ToString().Equals(Templates.LocalizeVariant.TemplateId));
             }
             else
             {
