@@ -13,19 +13,7 @@ namespace Foundation.Controls.Controls
             var keyValuePairs = associatedVariants.Any()
                 ? associatedVariants.Select(i => new KeyValuePair<string, string>(i.Name, i.ID.ToString())).ToList()
                 : new List<KeyValuePair<string, string>>();
-            output.Write("<select" + ControlAttributes + ">");
-            foreach (var keyValuePair in keyValuePairs)
-            {
-                if (keyValuePair.Value == Value)
-                {
-                    output.Write($"<option value=\"{keyValuePair.Value}\" selected=\"selected\">{keyValuePair.Key}</option>");
-                }
-                else
-                {
-                    output.Write($"<option value=\"{keyValuePair.Value}\">{keyValuePair.Key}</option>");
-                }
-            }
-            output.Write("</select>");
+            output.Write(VariantControlsHelper.OptionsToOutput(ControlAttributes, Value, keyValuePairs));
         }
         protected override bool LoadPostData(string value)
         {

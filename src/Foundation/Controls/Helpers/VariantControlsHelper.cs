@@ -30,5 +30,26 @@ namespace Foundation.Controls.Helpers
                 ? Context.ContentDatabase.GetItem(new ID(currentItemRegex.Match(controlAttributes).Value)).Parent
                 : Context.ContentDatabase.GetItem(new ID(currentItemRegex.Match(controlAttributes).Value));
         }        
+
+        public static string OptionsToOutput (string controlAttributes, string selectedValue, IEnumerable<KeyValuePair<string,string>> keyValuePairs)
+        {
+            var optionsToOutput = "<select" + controlAttributes + ">";
+
+            foreach (var keyValuePair in keyValuePairs)
+            {
+                if (keyValuePair.Value == selectedValue)
+                {
+                    optionsToOutput += $"<option value=\"{keyValuePair.Value}\" selected=\"selected\">{keyValuePair.Key}</option>";
+                }
+                else
+                {
+                    optionsToOutput += $"<option value=\"{keyValuePair.Value}\">{keyValuePair.Key}</option>";
+                }
+            }
+
+            optionsToOutput += "</select>";
+
+            return optionsToOutput;
+        }
     }
 }
