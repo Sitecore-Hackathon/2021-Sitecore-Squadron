@@ -3,6 +3,7 @@ using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Foundation.Controls.Helpers
@@ -31,7 +32,7 @@ namespace Foundation.Controls.Helpers
                 : Context.ContentDatabase.GetItem(new ID(currentItemRegex.Match(controlAttributes).Value));
         }        
 
-        public static string OptionsToOutput (string controlAttributes, string selectedValue, IEnumerable<KeyValuePair<string,string>> keyValuePairs)
+        public static string OptionsToOutput(string controlAttributes, string selectedValue, IEnumerable<KeyValuePair<string,string>> keyValuePairs)
         {
             var optionsToOutput = "<select" + controlAttributes + ">";
 
@@ -50,6 +51,13 @@ namespace Foundation.Controls.Helpers
             optionsToOutput += "</select>";
 
             return optionsToOutput;
+        }
+
+        public static IEnumerable<KeyValuePair<string, string>> GenerateKeyValuePairs(IEnumerable<Item> items)
+        {
+            return items.Any()
+                ? items.Select(i => new KeyValuePair<string, string>(i.Name, i.ID.ToString())).ToList()
+                : new List<KeyValuePair<string, string>>();
         }
     }
 }
