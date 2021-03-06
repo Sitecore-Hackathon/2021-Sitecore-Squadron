@@ -42,7 +42,14 @@ namespace Foundation.Controls.Controls
         {
             var renderingSettingItem = GetRenderingSettingItem();
             var selectedRenderingVariantDefinition = new ReferenceField(renderingSettingItem.Fields[Templates.LocalizedRenderingVariantSetting.Fields.RenderingVariantDefinitionId]).TargetItem;
-            return selectedRenderingVariantDefinition.Children;            
+            if (selectedRenderingVariantDefinition != null)
+            {
+                return selectedRenderingVariantDefinition.Children;
+            }
+            else
+            {
+                return new List<Item>();
+            }
         }
         private Item GetRenderingSettingItem()
         {

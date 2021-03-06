@@ -11,7 +11,7 @@ namespace Foundation.Controls.Controls
     {
         protected override void DoRender(System.Web.UI.HtmlTextWriter output)
         {
-            var associatedVariants = GetAssociatedVariants();
+            var associatedVariants = GetAssociatedVariants();            
             var keyValuePairs = associatedVariants.Any()
                 ? associatedVariants.Select(i => new KeyValuePair<string, string>(i.Name, i.ID.ToString())).ToList()
                 : new List<KeyValuePair<string, string>>();
@@ -43,7 +43,15 @@ namespace Foundation.Controls.Controls
             var currentItemRegex = new Regex(@"\{(.*?)\}");
             var renderingSettingItem = Sitecore.Context.ContentDatabase.GetItem(new ID(currentItemRegex.Match(ControlAttributes).Value));
             var selectedRenderingVariantDefinition = new ReferenceField(renderingSettingItem.Fields[Templates.LocalizedRenderingVariantSetting.Fields.RenderingVariantDefinitionId]).TargetItem;
-            return selectedRenderingVariantDefinition.Children;
+
+            if (selectedRenderingVariantDefinition != null)
+            {
+                return selectedRenderingVariantDefinition.Children;
+            }
+            else
+            {
+                return new List<Item>();
+            }            
         }
     }
 }
