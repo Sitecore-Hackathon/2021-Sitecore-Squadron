@@ -236,7 +236,6 @@
   <ItemGroup>
     <Content Include="App_Config\SitecoreSquadron\Foundation\SitecoreSquadron.Foundation.Controls.config" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\Default.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
