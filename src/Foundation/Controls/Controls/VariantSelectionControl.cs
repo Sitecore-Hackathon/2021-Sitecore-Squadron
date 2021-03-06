@@ -1,17 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
-using Sitecore.Data;
-using Sitecore.Data.Fields;
-using Sitecore.Data.Items;
+using Foundation.Controls.Helpers;
 using Sitecore.Web.UI.HtmlControls;
+
 namespace Foundation.Controls.Controls
 {
     public class VariantSelectionControl : Control
     {
         protected override void DoRender(System.Web.UI.HtmlTextWriter output)
         {
-            var associatedVariants = GetAssociatedVariants();
+            var associatedVariants = VariantControlsHelper.GetAssociatedVariants(ControlAttributes, true);
             var keyValuePairs = associatedVariants.Any()
                 ? associatedVariants.Select(i => new KeyValuePair<string, string>(i.Name, i.ID.ToString())).ToList()
                 : new List<KeyValuePair<string, string>>();
@@ -37,24 +35,6 @@ namespace Foundation.Controls.Controls
                 Sitecore.Context.ClientPage.Modified = true;
             this.SetViewStateString("Value", value);
             return true;
-        }
-        private IEnumerable<Item> GetAssociatedVariants()
-        {
-            var renderingSettingItem = GetRenderingSettingItem();
-            var selectedRenderingVariantDefinition = new ReferenceField(renderingSettingItem.Fields[Templates.LocalizedRenderingVariantSetting.Fields.RenderingVariantDefinitionId]).TargetItem;
-            if (selectedRenderingVariantDefinition != null)
-            {
-                return selectedRenderingVariantDefinition.Children;
-            }
-            else
-            {
-                return new List<Item>();
-            }
-        }
-        private Item GetRenderingSettingItem()
-        {
-            var currentItemRegex = new Regex(@"\{(.*?)\}");
-            return Sitecore.Context.ContentDatabase.GetItem(new ID(currentItemRegex.Match(ControlAttributes).Value)).Parent;
         }        
     }
 }
