@@ -13,18 +13,18 @@ using System.Web;
 
 namespace Foundation.Variants.Repositories
 {
-    public class LocalizedVariantReseolver : ILocalizedVariantResolver
+    public class LocalizedVariantResolver : ILocalizedVariantResolver
     {
         private readonly IPresentationContext _presentationContext;
 
-        public LocalizedVariantReseolver(IPresentationContext presentationContext)
+        public LocalizedVariantResolver(IPresentationContext presentationContext)
         {
             this._presentationContext = presentationContext;
         }
 
         public Item ResolveLocalizedVariantFromMagicVariant(Item magicVariantDefintion, bool enableFallback = true, bool logFallbackAsError = true)
         {
-            var fallBackItem = enableFallback ? null : magicVariantDefintion; // [LASTER.J] If We return ull, SXA will grab the default variant (1st variant definition)
+            var fallBackItem = enableFallback ? null : magicVariantDefintion; // [LASTER.J] If We return null, SXA will grab the default variant (1st variant definition)
             var presentationItem = this._presentationContext.GetPresentationItem(magicVariantDefintion);
             if (presentationItem == null)
             {
@@ -43,8 +43,11 @@ namespace Foundation.Variants.Repositories
                                     .Where(i => i.Paths.Contains(localizedVariantSettingsFolder.ID) && i.RenderingVariantDefinition.Contains(magicVariantDefintion.ParentID.Guid))
                                     .FirstOrDefault();
 
-                var fallbackVariantId = variantSetting.FallbackVariant;
-                fallBackItem = !string.IsNullOrWhiteSpace(fallbackVariantId) ? Sitecore.Context.Database.GetItem(fallbackVariantId) : fallBackItem;
+                if (variantSetting != null)
+                {
+                    var fallbackVariantId = variantSetting.FallbackVariant;
+                    fallBackItem = !string.IsNullOrWhiteSpace(fallbackVariantId) ? Sitecore.Context.Database.GetItem(fallbackVariantId) : fallBackItem;
+                }
             }
 
             if (variantSetting == null)

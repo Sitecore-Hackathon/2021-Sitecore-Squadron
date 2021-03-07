@@ -14,7 +14,7 @@ namespace Foundation.Variants.DI
         public void Configure(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IContentRepository, LocalizedVariantContentRepository>();
-            serviceCollection.AddTransient<ILocalizedVariantResolver, LocalizedVariantReseolver>();
+            serviceCollection.AddTransient<ILocalizedVariantResolver, LocalizedVariantResolver>();
         }
     }
 }
