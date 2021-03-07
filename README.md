@@ -32,7 +32,7 @@ Content Authors will not have to think twice to determine what rendering variant
 ## Installation instructions
 
 1. Start docker environment using `.\Start-Hackathon.ps1`
-2. Open solution in Visual Studio and run build on the solution
+2. Open solution in Visual Studio and build the solution.
 3. You have options on what to do next. We will provide two packages to install: 1) a package that contains simply the template items you need to create content and 2) a package that contains the template items AND sample content items. We recommend you install the latter.
 4. Publish the site.
 
@@ -42,14 +42,26 @@ If you installed the sample content package, you can skip Steps 1-6 completely. 
 
 1. Insert a Localized Rendering Variants Settings under the Presentation node found within the SXA site.
 
+![Localized Rendering Variants Settings](docs/images/insertingLocalizedRenderingVariantsSettings.PNG?raw=true "Localized Rendering Variants Settings")
+
 2. In this newly created item, insert a Localized Rendering Variants Setting item. Name it the name of the rendering variant definition you want to define localization options for.
+
+![Localized Rendering Variants Setting](docs/images/insertingLocalizedRenderingVariantsSetting.PNG?raw=true "Localized Rendering Variants Setting")
 
 3. On this newly created Localized Rendering Variant Setting item, fill the Rendering Variant Definition field with the Rendering Variant Definition you want to mess around with. Then save the item. After doing so, the available rendering variants will appear for the Fallback Variant field. This Fallback Variant field will be used when either a) a user's location cannot be resolved or b) the user's location is not within a certain distance away from a particular region to receive its localized version. Also be sure to update the distance in km how far away the user can be from the various locations in order for that location's variant to be shown.
 
+![Setting Rendering Variant Definition Selection](docs/images/settingRenderingVariantDefinitionSelection.PNG?raw=true "Setting Rendering Variant Definition Selection")
+
 4. Underneath the Localized Rendering Variant Setting item, insert a Coordinate Rule item. Here you define the longitude and latitude that the user must be within xxx distance of. Then define the variant you want displayed if the user is indeed within the xxx distance of the geolocation. Continue to create more Coordinate Rules if you want to define more areas to have different variants displayed.
+
+![Coordinate Rule Example](docs/images/coordinateRuleExample.PNG?raw=true "Coordinate Rule Example")
 
 5. Be sure to go to the rendering variant definition of the component you are specifying Localization settings for and insert our custom Localize variant. It is an insert option on the rendering variant definition.
 
+![Localize Insert Rule](docs/images/localizeInsertRule.PNG?raw=true "Localize Insert Rule")
+
 6. Open the Home page in the Experience Editor. Insert a component that has a Localized Rendering Variant Setting item created for it. Then select the Localized variant. Save. Publish site. 
+
+![Localize Insert Rule](docs/images/localizeInsertRule.PNG?raw=true "Localize Insert Rule")
 
 8. Navigate to the home page in the CD. The Home page should display the fallback variant of the components displayed since no location is specified. Add a query string with the params "lat" and "lng". Use the latitude and longitude values found on one of the Coordinate Rules items for that component. When the page loads, the component will be displayed using the variant specified in the Coordinate Rule instead of the selected fallback variant.
