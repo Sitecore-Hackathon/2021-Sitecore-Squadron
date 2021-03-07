@@ -31,14 +31,15 @@ Content Authors will not have to think twice to determine what rendering variant
 
 ## Installation instructions
 
-1. Start docker environment using `.\Start-Hackathon.ps1`
-2. Open solution in Visual Studio and build the solution.
-3. You have options on what to do next. We will provide two packages to install: 1) a package that contains simply the template items you need to create content and 2) a package that contains the template items AND sample content items. We recommend you install the latter.
-4. Publish the site.
+1. Start docker environment using `.\Start-Hackathon.ps1`.
+2. Populate Solr Managed Schema.
+3. Open solution in Visual Studio and build the solution.
+4. You have options on what to do next. We will provide two packages you can install: 1) a package that contains simply the template items you need to create content and 2) a package that contains the template items AND sample content items. We recommend you install the latter.
+5. Publish the site. Reindex.
 
 ## Usage instructions
 
-If you installed the sample content package, you can skip Steps 1-8 completely. The sample content package will come with examples already created.
+If you installed the sample content package, you can skip Steps 1-7 completely. The sample content package will come with examples already created.
 
 1. Insert a Localized Rendering Variants Settings under the Presentation node found within the SXA site.
 
