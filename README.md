@@ -38,7 +38,7 @@ Content Authors will not have to think twice to determine what rendering variant
 
 ## Usage instructions
 
-If you installed the sample content package, you can skip Steps 1-6 completely. The sample content package will come with examples already created.
+If you installed the sample content package, you can skip Steps 1-8 completely. The sample content package will come with examples already created.
 
 1. Insert a Localized Rendering Variants Settings under the Presentation node found within the SXA site.
 
