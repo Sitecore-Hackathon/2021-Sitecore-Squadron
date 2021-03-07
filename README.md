@@ -33,7 +33,8 @@ Content Authors will not have to think twice to determine what rendering variant
 
 1. Start docker environment using `.\Start-Hackathon.ps1`
 2. Open solution in Visual Studio and run build on the solution
-3. Use the Sitecore Installation wizard to
+3. You have options on what to do next. We will provide two packages to install: 1) a package that contains simply the template items you need to create content and 2) a package that contains the template items AND sample content items. We recommend you install the latter.
+4. Publish the site.
 
 ## Usage instructions
 
