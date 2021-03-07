@@ -34,7 +34,7 @@ Content Authors will not have to think twice to determine what rendering variant
 1. Start docker environment using `.\Start-Hackathon.ps1`.
 2. Populate Solr Managed Schema.
 3. Open solution in Visual Studio and build the solution.
-4. Install the content package we created [here](#https://github.com/Sitecore-Hackathon/2021-Sitecore-Squadron/blob/main/Content_SitecoreSquadron.zip).
+4. Install the content package we created [here](https://github.com/Sitecore-Hackathon/2021-Sitecore-Squadron/blob/main/Content_SitecoreSquadron.zip).
 5. Publish the site. Reindex.
 
 ## Usage instructions
