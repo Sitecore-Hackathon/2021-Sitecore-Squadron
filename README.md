@@ -1,11 +1,3 @@
-![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
-# Sitecore Hackathon 2021
-
-- MUST READ: **[Submission requirements](SUBMISSION_REQUIREMENTS.md)**
-- [Entry form template](ENTRYFORM.md)
-- [Starter kit instructions](STARTERKIT_INSTRUCTIONS.md)
-  
-
 ## Team name
 
 Sitecore Squadron
@@ -25,9 +17,8 @@ What was solved?
 Content Authors will not have to think twice to determine what rendering variant to choose for display in a particular region. Simply choose the Localize variant, and our module will take care of the rest.
 
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
 
-⟹ [Replace this Video link](#video-link)
+https://youtu.be/LgVPS5IpI9c
 
 ## Installation instructions
 
