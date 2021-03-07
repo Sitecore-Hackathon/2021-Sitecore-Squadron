@@ -34,12 +34,12 @@ Content Authors will not have to think twice to determine what rendering variant
 1. Start docker environment using `.\Start-Hackathon.ps1`.
 2. Populate Solr Managed Schema.
 3. Open solution in Visual Studio and build the solution.
-4. You have options on what to do next. We will provide two packages you can install: 1) a package that contains simply the template items you need to create content and 2) a package that contains the template items AND sample content items. We recommend you install the latter.
+4. Install the content package we created [here](#https://github.com/Sitecore-Hackathon/2021-Sitecore-Squadron/blob/main/Content_SitecoreSquadron.zip).
 5. Publish the site. Reindex.
 
 ## Usage instructions
 
-If you installed the sample content package, you can skip Steps 1-7 completely. The sample content package will come with examples already created.
+If you installed the sample content package, you can skip Steps 1-7 completely. The sample content package will come with examples already created. However, if you want to mess around with our module, you will want to read through all the steps.
 
 1. Insert a Localized Rendering Variants Settings under the Presentation node found within the SXA site.
 
