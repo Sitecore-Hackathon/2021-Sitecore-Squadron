@@ -62,6 +62,6 @@ If you installed the sample content package, you can skip Steps 1-6 completely. 
 
 6. Open the Home page in the Experience Editor. Insert a component that has a Localized Rendering Variant Setting item created for it. Then select the Localized variant. Save. Publish site. 
 
-![Localize Insert Rule](docs/images/localizeInsertRule.PNG?raw=true "Localize Insert Rule")
+![Select Localize](docs/images/selectLocalize.PNG?raw=true "Select Localize")
 
-8. Navigate to the home page in the CD. The Home page should display the fallback variant of the components displayed since no location is specified. Add a query string with the params "lat" and "lng". Use the latitude and longitude values found on one of the Coordinate Rules items for that component. When the page loads, the component will be displayed using the variant specified in the Coordinate Rule instead of the selected fallback variant.
+8. Navigate to the home page in the CD. The Home page should display the fallback variant of the components displayed since no location is specified. Add a query string with the params "lat" and "lng". Use the latitude and longitude values found on one of the Coordinate Rules items for that component. When the page loads, the component will be displayed using the variant specified in the Coordinate Rule instead of the selected fallback variant. An example of the query string looks like this: https://cm.sitecoresquadron.localhost/?lat=28.6448&lng=77.216721.
